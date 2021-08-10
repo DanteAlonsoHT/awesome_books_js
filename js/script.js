@@ -18,7 +18,6 @@ const books = {
     inputTitle = document.getElementById('input-title').value;
     inputAuthor = document.getElementById('input-author').value;
     newBook = [[inputTitle, inputAuthor]];
-    // newRegister = this.get_localstorage()
     this.save_localstorage(newBook);
     this.show_books();
     formBooks.reset();
