@@ -6,58 +6,57 @@ let inputAuthor = '';
 let newBook; let newData; let allBooks;
 
 class Methods {
-    add_book () {
-        inputTitle = document.getElementById('input-title').value;
-        inputAuthor = document.getElementById('input-author').value;
-        newBook = [[inputTitle, inputAuthor]];
-        this.save_localstorage(newBook);
-        this.show_books();
-        formBooks.reset();
-    }
+  addBook() {
+    inputTitle = document.getElementById('input-title').value;
+    inputAuthor = document.getElementById('input-author').value;
+    newBook = [[inputTitle, inputAuthor]];
+    this.saveLocalStorage(newBook);
+    this.showBooks();
+    formBooks.reset();
+  }
 
-    remove_book (index) {
-        if (index > -1) {
-            newData = this.get_localstorage();
-            newData.splice(index, 1);
-            this.update_localstorage(newData);
-            this.show_books();
-        }
+  removeBook(index) {
+    if (index > -1) {
+      newData = this.getLocalStorage();
+      newData.splice(index, 1);
+      this.updateLocalStorage(newData);
+      this.showBooks();
     }
+  }
 
-    show_books (){
-        containerBooks.innerHTML = '';
-        this.get_localstorage().forEach((book, index) => {
-        containerBooks.innerHTML
+  showBooks() {
+    containerBooks.innerHTML = '';
+    this.getLocalStorage().forEach((book, index) => {
+      containerBooks.innerHTML
             += `<div class='card-book' id='book-${index}'><strong class='book-title'>${book[0]}</strong>`
             + `<p class='book-author'>${book[1]}</p>`
-            + `<button type='button' id='button-remove-${index}' onclick='methods.remove_book(${index})'>Remove</button></div><hr>`;
+            + `<button type='button' id='button-remove-${index}' onclick='methods.removeBook(${index})'>Remove</button></div><hr>`;
     });
+  }
+
+  saveLocalStorage(data) {
+    allBooks = this.getLocalStorage();
+    if (allBooks.length !== 0) {
+      localStorage.setItem('all_books', JSON.stringify(allBooks.concat(data)));
+    } else {
+      localStorage.setItem('all_books', JSON.stringify(data));
+    }
+  }
+
+  getLocalStorage = () => {
+    if (localStorage.getItem('all_books')) {
+      return JSON.parse(localStorage.getItem('all_books'));
     }
 
-    save_localstorage(data) {
-        allBooks = this.get_localstorage();
-        if (allBooks.length !== 0) {
-          localStorage.setItem('all_books', JSON.stringify(allBooks.concat(data)));
-        } else {
-          localStorage.setItem('all_books', JSON.stringify(data));
-        }
-    }
+    return [];
+  }
 
-    get_localstorage() {
-        if (localStorage.getItem('all_books')) {
-          return JSON.parse(localStorage.getItem('all_books'));
-        }
-    
-        return [];
-    }
-
-    update_localstorage(data) {
-        localStorage.clear();
-        localStorage.setItem('all_books', JSON.stringify(data));
-    }
+  updateLocalStorage = (data) => {
+    localStorage.clear();
+    localStorage.setItem('all_books', JSON.stringify(data));
+  }
 }
 
-
-methods = new Methods
-buttonAddBook.onclick = function add() { methods.add_book(); };
-methods.show_books();
+const methods = new Methods();
+buttonAddBook.onclick = function add() { methods.addBook(); };
+methods.showBooks();
