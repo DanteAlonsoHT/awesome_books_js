@@ -1,5 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+
 body {
   padding: 0;
   margin: 1rem;
   box-sizing: border-box;
+  font-family: 'Comic Neue', cursive;
+}
+
+h2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h3 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#content-books {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card-book {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book-info {
+  display: flex;
+  align-items: center;
+}
+
+.book-info > strong {
+  margin-right: 15px;
+}
+
+.button-remove {
+  margin-right: 2rem;
+}
+
+#form-books {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  align-content: center;
+  margin: 0 auto;
+}
+
+#button-add {
+  max-width: 50px;
+  align-self: flex-end;
+}
+
+.line-border {
+  border-top: 3px solid;
+  max-width: 200px;
+  margin: 0 auto;
 }

@@ -1,6 +1,7 @@
 const buttonAddBook = document.getElementById('button-add');
 const containerBooks = document.getElementById('content-books');
 const formBooks = document.getElementById('form-books');
+const cardBook = document.getElementsByClassName('card-book');
 let inputTitle = '';
 let inputAuthor = '';
 let newBook; let newData; let allBooks;
@@ -28,9 +29,15 @@ class Methods {
     containerBooks.innerHTML = '';
     this.getLocalStorage().forEach((book, index) => {
       containerBooks.innerHTML
-            += `<div class='card-book' id='book-${index}'><strong class='book-title'>${book[0]}</strong>`
-            + `<p class='book-author'>${book[1]}</p>`
-            + `<button type='button' id='button-remove-${index}' onclick='methods.removeBook(${index})'>Remove</button></div><hr>`;
+            += `<div class='card-book' id='book-${index}'><div class='book-info'><strong class='book-title'>${book[0]}</strong>`
+            + `<p class='book-author'>${book[1]}</p></div>`
+            + `<button class='button-remove' type='button' id='button-remove-${index}' onclick='methods.removeBook(${index})'>Remove</button></div>`;
+            if(index%2===0){
+              document.getElementById(`book-${index}`).style.backgroundColor="blue";
+              // console.log(cardBook);
+            }else{
+              document.getElementById(`book-${index}`).style.backgroundColor="red";
+            }
     });
   }
 
