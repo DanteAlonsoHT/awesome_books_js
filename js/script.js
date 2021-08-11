@@ -56,3 +56,8 @@ class Methods {
         localStorage.setItem('all_books', JSON.stringify(data));
     }
 }
+
+
+methods = new Methods
+buttonAddBook.onclick = function add() { methods.add_book(); };
+methods.show_books();
