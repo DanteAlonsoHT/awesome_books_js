@@ -29,14 +29,14 @@ class Methods {
     containerBooks.innerHTML = '';
     this.getLocalStorage().forEach((book, index) => {
       containerBooks.innerHTML
-            += `<div class='card-book' id='book-${index}'><div class='book-info'><strong class='book-title'>${book[0]}</strong>`
-            + `<p class='book-author'>${book[1]}</p></div>`
+            += `<div class='card-book' id='book-${index}'><div class='book-info'><strong class='book-title'>"${book[0]}"</strong>`
+            + `<p class='book-author'>by ${book[1]}</p></div>`
             + `<button class='button-remove' type='button' id='button-remove-${index}' onclick='methods.removeBook(${index})'>Remove</button></div>`;
             if(index%2===0){
-              document.getElementById(`book-${index}`).style.backgroundColor="blue";
+              document.getElementById(`book-${index}`).style.backgroundColor="#b5d9ffbb";
               // console.log(cardBook);
             }else{
-              document.getElementById(`book-${index}`).style.backgroundColor="red";
+              document.getElementById(`book-${index}`).style.backgroundColor="#d8ebffbb";
             }
     });
   }
