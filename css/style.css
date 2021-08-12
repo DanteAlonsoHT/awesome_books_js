@@ -11,16 +11,17 @@ body {
 }
 
 h1 {
-  padding: 0 auto;
   text-align: center;
 }
 
-h2, h3 {
+h2,
+h3 {
   display: flex;
   justify-content: space-evenly;
   font-weight: 900;
   font-size: 1.75rem;
 }
+
 #content-books {
   max-width: 1250px;
   margin: 2rem auto;
