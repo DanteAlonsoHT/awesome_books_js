@@ -1,10 +1,10 @@
 ﻿![](https://img.shields.io/badge/Microverse-blueviolet) <img height=25px src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 
-# Awesome Books - JavaScript with Local Storage
+# Awesome Books - Style Core Elements
 
 > This repository is about an example of how to build your own JavaScript application using Local Storage to save data in your browser.
 
-As you can see in this repository, the main idea is to create an application to store your books using the book's title and book's author, all of this using JavaScript with Local Storage, then the repository is to improve your way to learn about Objects in JavaScript.
+For this particular repository, we've added the styles enough according to us, the main idea is following the layout according to project requirements.
 
 ## Built With 🔨
 
@@ -38,7 +38,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Dante Alonso Hernández Tapia**
+👤 **Dante Alonso**
 
 - GitHub: [@DanteAlonsoHT](https://github.com/DanteAlonsoHT)
 - Twitter: [@dante_dante1](https://twitter.com/dante_dante1)
