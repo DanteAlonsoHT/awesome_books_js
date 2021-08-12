@@ -5,21 +5,25 @@ body {
   margin: 1rem;
   box-sizing: border-box;
   font-family: 'Comic Neue', cursive;
+  background-image: linear-gradient(0deg, #4b666e 0%, #d2ddd8 100%);
+  min-height: 100vh;
+  color: #425b62;
 }
 
-h2 {
+h1 {
+  padding: 0 auto;
+  text-align: center;
+}
+
+h2, h3 {
   display: flex;
   justify-content: space-evenly;
+  font-weight: 900;
+  font-size: 1.75rem;
 }
-
-h3 {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 #content-books {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 1250px;
+  margin: 2rem auto;
 }
 
 .card-book {
@@ -32,14 +36,19 @@ h3 {
 .book-info {
   display: flex;
   align-items: center;
+  padding: 0.15rem 1rem;
 }
 
 .book-info > strong {
-  margin-right: 15px;
+  margin-right: 8px;
 }
 
 .button-remove {
   margin-right: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: #c32439cc;
+  color: #d2ddd8;
+  font-weight: 700;
 }
 
 #form-books {
@@ -51,12 +60,35 @@ h3 {
 }
 
 #button-add {
-  max-width: 50px;
+  max-width: 80px;
   align-self: flex-end;
+  padding: 0.5rem 1rem;
+  border-radius: 0.8rem;
+  border: 1px solid #bbb3;
+  background-color: #dc7928;
+  color: #d2ddd8;
+  font-weight: 700;
+}
+
+#button-add:hover {
+  cursor: pointer;
+  background-color: #d2ddd8;
+  color: #dc7928;
+  border: 1px solid #dc7928;
 }
 
 .line-border {
   border-top: 3px solid;
-  max-width: 200px;
-  margin: 0 auto;
+  max-width: 150px;
+  margin: 2rem auto;
+}
+
+input {
+  padding: 0.5rem 1rem;
+  border-radius: 36px;
+  border: 1px solid #bbb3;
+}
+
+input:focus {
+  outline: none;
 }
