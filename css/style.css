@@ -2,7 +2,7 @@
 
 body {
   padding: 0;
-  margin: 1rem;
+  margin: 0;
   box-sizing: border-box;
   font-family: 'Comic Neue', cursive;
   background-image: linear-gradient(0deg, #4b666e 0%, #d2ddd8 100%);
@@ -92,4 +92,37 @@ input {
 
 input:focus {
   outline: none;
+}
+
+.contact-us {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  /* color: #CFDAD6; */
+}
+
+.contact-us-heading {
+  margin-bottom: 4rem;
+}
+
+.contact-us > p {
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.contact-us > ul {
+  font-weight: 900;
+  font-size: 1.2rem;
+  margin-left: 30rem;
+}
+
+footer {
+  background-color: #fff;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.5rem;
 }

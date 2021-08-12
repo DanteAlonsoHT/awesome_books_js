@@ -1,6 +1,12 @@
+// const { DateTime } = require("luxon");
+
+
 const buttonAddBook = document.getElementById('button-add');
 const containerBooks = document.getElementById('content-books');
 const formBooks = document.getElementById('form-books');
+// let DateTime = luxon.DateTime;
+// dt = DateTime.fromObject({day: 22, hour: 12 }, { zone: 'America/Los_Angeles', numberingSystem: 'beng'})
+// const now = DateTime.now();
 let inputTitle = '';
 let inputAuthor = '';
 let newBook; let newData; let allBooks;
