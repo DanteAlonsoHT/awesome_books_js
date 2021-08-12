@@ -1,7 +1,6 @@
 const buttonAddBook = document.getElementById('button-add');
 const containerBooks = document.getElementById('content-books');
 const formBooks = document.getElementById('form-books');
-const cardBook = document.getElementsByClassName('card-book');
 let inputTitle = '';
 let inputAuthor = '';
 let newBook; let newData; let allBooks;
@@ -32,12 +31,12 @@ class Methods {
             += `<div class='card-book' id='book-${index}'><div class='book-info'><strong class='book-title'>"${book[0]}"</strong>`
             + `<p class='book-author'>by ${book[1]}</p></div>`
             + `<button class='button-remove' type='button' id='button-remove-${index}' onclick='methods.removeBook(${index})'>Remove</button></div>`;
-            if(index%2===0){
-              document.getElementById(`book-${index}`).style.backgroundColor="#b5d9ffbb";
-              // console.log(cardBook);
-            }else{
-              document.getElementById(`book-${index}`).style.backgroundColor="#d8ebffbb";
-            }
+      if (index % 2 === 0) {
+        document.getElementById(`book-${index}`).style.backgroundColor = '#b5d9ffbb';
+        // console.log(cardBook);
+      } else {
+        document.getElementById(`book-${index}`).style.backgroundColor = '#d8ebffbb';
+      }
     });
   }
 
