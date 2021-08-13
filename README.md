@@ -4,7 +4,7 @@
 
 > This repository is about an example of how to build your own JavaScript application using Local Storage to save data in your browser.
 
-For this particular repository, we've added the styles enough according to us, the main idea is following the layout according to project requirements.
+For this particular repository, we've fixed our web app to create three sections in order to separate the list of books, the form to add a new book, and the contact us section. Also, we used the luxon library to add the datetime to our project.
 
 ## Built With 🔨
 
