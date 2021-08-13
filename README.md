@@ -48,7 +48,7 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@dante_dante1](https://twitter.com/dante_dante1)
 - LinkedIn: [Dante Alonso](https://www.linkedin.com/in/dante-hernandez99/)
 
-👤 **Laylo**
+👤 **Laylo Khodjaeva**
 
 - GitHub: [@Laylooo](https://github.com/Laylooo)
 - Twitter: [@laylo](https://twitter.com/home?lang=en)
