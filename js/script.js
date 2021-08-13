@@ -1,6 +1,13 @@
 const buttonAddBook = document.getElementById('button-add');
 const containerBooks = document.getElementById('content-books');
 const formBooks = document.getElementById('form-books');
+
+const sectionList = document.getElementById('section-list');
+const sectionAddNew = document.getElementById('section-add-new');
+const sectionContactUs = document.getElementById('section-contact-us');
+const sectionTitle = document.getElementById('section-title');
+const navLinks = document.querySelectorAll('.nav-links li');
+
 let inputTitle = '';
 let inputAuthor = '';
 let newBook; let newData; let allBooks;
@@ -66,3 +73,36 @@ class Methods {
 const methods = new Methods();
 buttonAddBook.onclick = function add() { methods.addBook(); };
 methods.showBooks();
+
+/* eslint-disable-next-line */
+document.getElementById('date-time-now').textContent = luxon.DateTime.now().toFormat('DDD tt');
+
+document.getElementById('link-section-list').onclick = function goToList() {
+  sectionList.style.display = 'flex';
+  sectionAddNew.style.display = 'none';
+  sectionContactUs.style.display = 'none';
+  sectionTitle.textContent = 'All awesome books';
+  navLinks[0].style.opacity = '50%';
+  navLinks[1].style.opacity = '100%';
+  navLinks[2].style.opacity = '100%';
+};
+
+document.getElementById('link-section-add').onclick = function goToAdd() {
+  sectionList.style.display = 'none';
+  sectionAddNew.style.display = 'flex';
+  sectionContactUs.style.display = 'none';
+  sectionTitle.textContent = 'Add a new book';
+  navLinks[0].style.opacity = '100%';
+  navLinks[1].style.opacity = '50%';
+  navLinks[2].style.opacity = '100%';
+};
+
+document.getElementById('link-section-contact').onclick = function goToContact() {
+  sectionList.style.display = 'none';
+  sectionAddNew.style.display = 'none';
+  sectionContactUs.style.display = 'flex';
+  sectionTitle.textContent = 'Contact information';
+  navLinks[0].style.opacity = '100%';
+  navLinks[1].style.opacity = '100%';
+  navLinks[2].style.opacity = '50%';
+};

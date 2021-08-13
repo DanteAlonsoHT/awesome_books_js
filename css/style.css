@@ -2,29 +2,95 @@
 
 body {
   padding: 0;
-  margin: 1rem;
+  margin: 0;
   box-sizing: border-box;
   font-family: 'Comic Neue', cursive;
-  background-image: linear-gradient(0deg, #4b666e 0%, #d2ddd8 100%);
+  background-image: linear-gradient(0deg, #4b666ea8 0%, #d2ddd8 100%);
   min-height: 100vh;
   color: #425b62;
 }
 
+header {
+  background-color: rgba(255, 255, 255, 0.85);
+  display: block;
+  width: 100%;
+}
+
+section {
+  min-height: 50vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h1 {
+  margin: 3rem 0;
   text-align: center;
 }
 
-h2,
-h3 {
+#date-time-now {
+  display: block;
+  position: absolute;
+  right: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+#section-add-new,
+#section-contact-us {
+  display: none;
+}
+
+.nav-container {
   display: flex;
-  justify-content: space-evenly;
-  font-weight: 900;
-  font-size: 1.75rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.logo {
+  padding: 0 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+a:hover {
+  opacity: 70%;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #425b62;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  padding: 0 1.5rem;
+  min-width: 200px;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.nav-links li:first-child {
+  opacity: 50%;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #425b62;
+  font-size: 1.1rem;
 }
 
 #content-books {
-  max-width: 1250px;
-  margin: 2rem auto;
+  width: 80%;
+  min-width: 300px;
+  max-width: 1080px;
+  overflow-y: scroll;
+  max-height: 250px;
 }
 
 .card-book {
@@ -50,20 +116,28 @@ h3 {
   background-color: #c32439cc;
   color: #d2ddd8;
   font-weight: 700;
+  border: 1px solid #c32439cc;
+}
+
+.button-remove:hover {
+  cursor: pointer;
+  background-color: #d2ddd8;
+  color: #c32439cc;
 }
 
 #form-books {
   display: flex;
   flex-direction: column;
-  max-width: 250px;
+  width: 50%;
+  min-width: 300px;
+  max-width: 500px;
   align-content: center;
   margin: 0 auto;
 }
 
 #button-add {
-  max-width: 80px;
   align-self: flex-end;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2.5rem;
   border-radius: 0.8rem;
   border: 1px solid #bbb3;
   background-color: #dc7928;
@@ -85,11 +159,45 @@ h3 {
 }
 
 input {
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   border-radius: 36px;
   border: 1px solid #bbb3;
 }
 
 input:focus {
   outline: none;
+}
+
+.section-contact-us-heading {
+  margin-bottom: 4rem;
+}
+
+#section-contact-us > p {
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+#section-contact-us ul {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+footer {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  padding: 2rem 0;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.copyright-text {
+  padding: 0 2rem;
 }
