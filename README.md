@@ -21,12 +21,13 @@ For this particular repository, we've fixed our web app to create three sections
 ### Install
 
 To get a local copy up and running follow these simple example steps.
+
 - Open terminal
 - Clone this project by the command `git clone https://github.com/DanteAlonsoHT/awesome_books_js.git`
 - `Cd awesome_books_js` folder
 - Open `index.html` in your local browser or using Live Server in Visual Studio Code.
 
-## Getting Started 
+## Getting Started
 
 - We've used Local Storage with JavaScript.
 - I've included linters to improve and cleaning all of our code.
@@ -54,7 +55,6 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@laylo](https://twitter.com/home?lang=en)
 - LinkedIn: [Laylo](https://www.linkedin.com/in/laylo-khodjaeva-05a972207/)
 
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -64,7 +64,6 @@ Feel free to check the [issues page](https://github.com/DanteAlonsoHT/awesome_bo
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
 
 ## Acknowledgments
 
