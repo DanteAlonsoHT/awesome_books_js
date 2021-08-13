@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  background-color:rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 section {
@@ -34,7 +34,8 @@ h1 {
   padding: 0.5rem 0;
 }
 
-#section-add-new, #section-contact-us {
+#section-add-new,
+#section-contact-us {
   display: none;
 }
 
@@ -51,6 +52,10 @@ h1 {
   padding: 0 1.5rem;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+a:hover {
+  opacity: 70%;
 }
 
 .logo a {
@@ -82,7 +87,7 @@ h1 {
   min-width: 300px;
   max-width: 1080px;
   overflow-y: scroll;
-  max-height: 250px
+  max-height: 250px;
 }
 
 .card-book {
@@ -189,8 +194,4 @@ footer {
   text-align: center;
   font-weight: 900;
   font-size: 1.5rem;
-}
-
-a:hover {
-  opacity: 70%;
 }
